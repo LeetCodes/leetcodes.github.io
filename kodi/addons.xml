@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="plugin.video.htpc-solutions.skygo" name="Sky Go Client" version="0.1.5" provider-name="HTPC Solutions">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.htpc-solutions" version="0.0.3"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="plugin.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="login"/>
+  <extension point="xbmc.addon.metadata" name="htpc-solutions.skygo.metadata">
+    <language/>
+    <summary lang="en">Sky Go Client</summary>
+    <description lang="en"/>
+    <platform>all</platform>
+    <website>http://htpc.solutions/</website>
+    <source>https://github.com/htpcsolutions/plugin.video.htpc-solutions.skygo</source>
+    <forum/>
+    <email>support@htpc.solutions</email>
+  </extension>
+</addon>
+
+<addon id="plugin.video.htpc-solutions.sling" name="Sling Client" version="0.3.4" provider-name="HTPC Solutions">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.htpc-solutions" version="0.0.3"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="plugin.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="login"/>
+  <extension point="xbmc.addon.metadata" name="htpc-solutions.sling.metadata">
+    <language/>
+    <summary lang="en">Sling Client</summary>
+    <description lang="en"/>
+    <platform>all</platform>
+    <website>http://htpc.solutions/</website>
+    <source>https://github.com/htpcsolutions/plugin.video.htpc-solutions.sling</source>
+    <forum/>
+    <email>support@htpc.solutions</email>
+  </extension>
+</addon>
+
+<addon id="program.htpc-solutions.commander" name="Commander" version="0.0.5" provider-name="HTPC Solutions">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.htpc-solutions" version="0.0.3"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="plugin.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="login"/>
+  <extension point="xbmc.addon.metadata" name="htpc-solutions.commander.metadata">
+    <language/>
+    <summary lang="en">Utility for launching external commands</summary>
+    <description lang="en"/>
+    <platform>all</platform>
+    <website>http://htpc.solutions/</website>
+    <source>https://github.com/htpcsolutions/program.htpc-solutions.commander</source>
+    <forum/>
+    <email>support@htpc.solutions</email>
+  </extension>
+</addon>
+
+<addon id="repository.htpc-solutions" version="0.0.2" name="HTPC Solutions Repository" provider-name="HTPC Solutions">
+	<extension point="xbmc.addon.repository" name="HTPC Solutions Repository">
+		<info compressed="true">https://raw.githubusercontent.com/htpcsolutions/downloads/master/kodi/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/htpcsolutions/downloads/master/kodi/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.github.com/htpcsolutions/downloads/master/kodi/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Download, install and automatically update add-ons from HTPC Solutions</summary>
+		<description>Every XBMC \ Kodi addon developed by HTPC Solutions.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.module.boto3" name="Boto3" version="1.1.1" provider-name="Boto">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.dateutil" version="2.4.2"/>
+    <import addon="script.module.six" version="1.9.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <language/>
+    <summary lang="en">Boto3 - AWS SDK for Python</summary>
+    <description lang="en">Packed for Kodi from https://github.com/boto/boto3</description>
+    <platform>all</platform>
+    <website>http://htpc.solutions/</website>
+    <source>https://github.com/htpcsolutions/script.module.boto3</source>
+    <forum>http://forum.xbmc.org/showthread.php?tid=138745</forum>
+    <email>support@htpc.solutions</email>
+  </extension>
+</addon>
+
+<addon id="script.module.htpc-solutions" name="HTPC Solutions" version="0.0.4" provider-name="HTPC Solutions">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.boto3" version="1.1.1"/>
+    <import addon="script.module.tinydb" version="2.3.2"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <language/>
+    <summary lang="en">HTPC Solutions Shared Library</summary>
+    <description lang="en"/>
+    <platform>all</platform>
+    <website>http://htpc.solutions/</website>
+    <source>https://github.com/htpcsolutions/script.module.htpcsolutions</source>
+    <forum>http://forum.xbmc.org/showthread.php?tid=138745</forum>
+    <email>support@htpc.solutions</email>
+  </extension>
+</addon>
+
+<addon id="script.module.tinydb" name="TinyDB" version="2.3.2" provider-name="Markus Siemens">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <summary>tinydb - document oriented database optimized for your happiness</summary>
+    <description>Packed for Kodi from https://github.com/msiemens/tinydb</description>
+    <platform>all</platform>
+    <language/>
+    <license>Revised BSD License</license>
+    <forum/>
+    <website>http://tinydb.readthedocs.org/en/latest/</website>
+    <source>https://github.com/htpcsolutions/script.module.tinydb</source>
+    <email/>
+  </extension>
+</addon>
+
+</addons>

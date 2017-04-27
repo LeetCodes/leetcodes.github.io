@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="program.htpc-solutions.commander" name="Commander" version="0.0.5" provider-name="HTPC Solutions">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.htpc-solutions" version="0.0.3"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="plugin.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="login" />
+  <extension point="xbmc.addon.metadata" name="htpc-solutions.commander.metadata">
+    <language></language>
+    <summary lang="en">Utility for launching external commands</summary>
+    <description lang="en"></description>
+    <platform>all</platform>
+    <website>http://htpc.solutions/</website>
+    <source>https://github.com/htpcsolutions/program.htpc-solutions.commander</source>
+    <forum></forum>
+    <email>support@htpc.solutions</email>    
+  </extension>
+</addon>
+
