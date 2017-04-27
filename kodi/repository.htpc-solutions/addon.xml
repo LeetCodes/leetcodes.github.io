@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.htpc-solutions" version="0.0.2" name="HTPC Solutions Repository" provider-name="HTPC Solutions">
+	<extension point="xbmc.addon.repository" name="HTPC Solutions Repository">
+		<info compressed="true">https://raw.githubusercontent.com/htpcsolutions/downloads/master/kodi/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/htpcsolutions/downloads/master/kodi/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.github.com/htpcsolutions/downloads/master/kodi/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Download, install and automatically update add-ons from HTPC Solutions</summary>
+		<description>Every XBMC \ Kodi addon developed by HTPC Solutions.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
