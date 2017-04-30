@@ -1,9 +1,16 @@
 function getNewHttpObject() {
 var o = false;
-try o = new ActiveXObject('Msxml2.XMLHTTP'); catch(e) try o = new ActiveXObject('Microsoft.XMLHTTP'); catch(e) o = new XMLHttpRequest();
+try {
+o = new ActiveXObject('Msxml2.XMLHTTP');
+} catch(e) {
+try {
+o = new ActiveXObject('Microsoft.XMLHTTP');
+} catch(e) {
+o = new XMLHttpRequest();
+}
+}
 return o;
 }
-
 function getAXAH(url){
 	var theHttpRequest = getNewHttpObject();
 	theHttpRequest.onreadystatechange = function() {processAXAH();};
