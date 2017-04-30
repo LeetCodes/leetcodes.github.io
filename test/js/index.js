@@ -9,13 +9,13 @@ $(document).ready(function() {
 			
 		$.ajax({
 			type: "GET",
-			url: "",
+			url: "/test.html",
 			data: {
 				pg: cp
 			},
 			success: function(result) {
 				if (result) {
-					alert('page ' + cp);
+					alert('page ' + cp + ' - ' + result);
                     cp = cp + 1;
 				} else {
 					var done_scrolling = 1;
