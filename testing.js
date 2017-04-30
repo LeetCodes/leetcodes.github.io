@@ -46,4 +46,4 @@ theHttpRequest.send(params);
 }
 
 console.log('running script');
-getAXAH('http://' + window.location.hostname + '/test.html');
+getAXAH('https://' + window.location.hostname + '/test.html');
