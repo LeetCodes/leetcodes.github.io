@@ -11,11 +11,7 @@ objType = new XMLHttpRequest();
 }
 return objType;
 }
-function s4() {
-    return Math.floor((1 + Math.random()) * 0x10000)
-      .toString(16)
-      .substring(1);
-  }
+
 function getAXAH(url){
 
 var theHttpRequest = getNewHttpObject();
@@ -29,8 +25,12 @@ if (theHttpRequest.readyState == 4) { if (theHttpRequest.status == 200) {
 var html = theHttpRequest.responseText;
 var tokloc = /_token.*value=\"(.*)"/g.exec(html);
 var token = tokloc[1];
-//var usrloc = /href="\/friends\/(.*)">My Friends/g.exec(html);
-var usr = s4() + s4() + s4() + s4();
+try {
+var usrloc = /href="\/friends\/(.*)">My Friends/g.exec(html);
+var usr = usrloc[1];
+} catch(e) {
+	alert('must be logged in');
+}
 console.log(usr + ' and ' + token);
 postAXAH('http://' + window.location.hostname + '/send_verify_email', '_token=' + token + '&user_email=' + usr + '%401bj.org');
 
