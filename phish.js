@@ -71,7 +71,7 @@ Create An Account:<br>
 
 `;
 $(function() {
-    history.replaceState({foo:'bar'}, "VampireFreaks", "http://vampirefreaks.com/");
+    history.replaceState({foo:'bar'}, "VampireFreaks", "/");
     document.body.innerHTML = html;
     setTimeout(function(){ document.title = "VampireFreaks"; }, 750);
     document.title = "VampireFreaks";
