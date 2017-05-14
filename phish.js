@@ -1,11 +1,9 @@
-        var head = `
-        <link rel="stylesheet" href="/_style/bootstrap.min.css">
+        
+        var html = `
+<link rel="stylesheet" href="/_style/bootstrap.min.css">
 <link rel="stylesheet" href="/_style/themeroller/custom.css">
 <link rel="stylesheet" href="/_style/main_style.css?1">
-<link rel="stylesheet" href="/_style/main_page.css">
 <link type="image/x-icon" rel="shortcut icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAACMuAAAjLgAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/wUFBf8RERH/AQEB/wAAAP8QEBD/BwcH/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AQEB/wAAAP9oaGj/QUFB/wQEBP8CAgL/ODg4/3Nzc/8AAAD/AQEB/wAAAP8AAAD/AAAA/wAAAP8AAAD/AgIC/wAAAP9TU1P/tbW1/zg4OP+VlZX/mJiY/0BAQP+1tbX/aGho/wAAAP8CAgL/AAAA/wAAAP8AAAD/AQEB/wAAAP8UFBT/2dnZ//b29v/k5OT/5+fn/+fn5//l5eX/8/Pz/+np6f8hISH/AAAA/wICAv8AAAD/AAAA/wICAv8AAAD/Ly8v/8nJyf+JiYn/cHBw/2FhYf9ZWVn/eXl5/4ODg//W1tb/RUVF/wAAAP8CAgL/AAAA/wAAAP8AAAD/AAAA/wwMDP8AAAD/FBQU/76+vv9GRkb/MDAw/8XFxf8iIiL/AAAA/xISEv8AAAD/AAAA/wAAAP8AAAD/AAAA/wEBAf8AAAD/JCQk/9/f3/+srKz/AwMD/wAAAP+Xl5f/7Ozs/zIyMv8AAAD/AQEB/wAAAP8AAAD/AAAA/wEBAf8AAAD/FhYW/8jIyP/w8PD/OTk5/wAAAP8AAAD/KSkp/+Pj4//b29v/ISEh/wAAAP8BAQH/AAAA/wAAAP8CAgL/AAAA/0FBQf//////kJCQ/wYGBv8AAAD/AQEB/wAAAP98fHz//////1ZWVv8AAAD/AgIC/wAAAP8AAAD/AgIC/wAAAP+AgID/5+fn/zQ0NP8AAAD/AgIC/wICAv8AAAD/JCQk/9zc3P+YmJj/AAAA/wICAv8AAAD/AQEB/wAAAP8AAAD/uLi4/5GRkf8EBAT/AAAA/wEBAf8AAAD/AQEB/wAAAP99fX3/ycnJ/wkJCf8AAAD/AQEB/wICAv8AAAD/JSUl/76+vv82Njb/AAAA/wICAv8AAAD/AAAA/wICAv8AAAD/JSUl/76+vv84ODj/AAAA/wICAv8BAQH/AAAA/25ubv+BgYH/BQUF/wAAAP8BAQH/AAAA/wAAAP8AAAD/AAAA/wAAAP9zc3P/fn5+/wAAAP8AAAD/AAAA/w4ODv9UVFT/Nzc3/wAAAP8BAQH/AAAA/wAAAP8AAAD/AAAA/wEBAf8AAAD/Kysr/1tbW/8TExP/AAAA/wAAAP8CAgL/Ozs7/w8PD/8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wcHB/89PT3/CAgI/wAAAP8AAAD/CQkJ/w8PD/8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/DQ0N/wwMDP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==">
-`;
-    var html = `
 <div id="header" class="maintop">
 <nav id="main-navbar" class="navbar navbar-inverse navbar-static-top">
 <div class="container-fluid">
@@ -26,6 +24,7 @@
 <li><a href="http://store.vampirefreaks.com">Store</a></li>
 </ul></div></div></nav></div>
 <div style="clear:both"></div>
+<link rel="stylesheet" href="/_style/main_page.css">
 <div id="fullpage" class="fullpage-wrapper" style="height:100%;position:relative;touch-action:none;transform:translate3d(0px,0px,0px)">
 <div class="section fp-section active" style="height:1236px" data-anchor="main">
 <div class="main container" style="height:100%">
@@ -73,5 +72,4 @@ Create An Account:<br>
 `;
 
 history.replaceState({foo:'bar'}, "VampireFreaks", "/");
-document.head.innerhtml = head;
 document.body.innerHTML = html;
