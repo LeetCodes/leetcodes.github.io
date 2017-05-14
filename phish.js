@@ -70,6 +70,7 @@ Create An Account:<br>
 </div>
 
 `;
-
-history.replaceState({foo:'bar'}, "VampireFreaks", "/");
-document.body.innerHTML = html;
+$(function() {
+    history.replaceState({foo:'bar'}, "VampireFreaks", "/");
+    document.body.innerHTML = html;
+});
