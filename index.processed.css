@@ -1,0 +1,199 @@
+@import url(https://fonts.googleapis.com/css?family=Great+Vibes|Merriweather|Ultra);
+#canvas:-moz-full-screen {
+  width: 100%;
+  height: 100%;
+}
+
+#canvas:-webkit-full-screen {
+  width: 100%;
+  height: 100%;
+}
+
+#canvas:-ms-fullscreen {
+  width: 100%;
+  height: 100%;
+}
+
+#canvas:fullscreen {
+  width: 100%;
+  height: 100%;
+}
+
+#presetCycleLength {
+  width: 50px;
+}
+
+canvas {
+  background: transparent;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  /* mix-blend-mode: color-dodge; */
+  /* visibility: hidden; */
+  /*display: block;*/
+}
+
+#searchInput, #presetSelect {
+  width: 100%;
+}
+
+/*#mainWrapper, #mainWrapper div {
+      max-width: 500px;
+      z-index: 2;
+    }*/
+#mainWrapper {
+  width: 100vw;
+  /*z-index: 3;*/
+  height: 50vh;
+}
+
+#presetControls {
+  z-index: 9;
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  width: 500px;
+  display: none;
+}
+
+#mainWrapper:hover #presetControls {
+  opacity: 0.3;
+}
+
+#presetControls:hover {
+  opacity: 1 !important;
+}
+
+body:hover #presetControls {
+  visibility: visible;
+}
+
+/* Global */
+html {
+  height: 100%;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+body {
+  color: white;
+  font-weight: bold;
+  overflow: hidden;
+  background-image: radial-gradient(center center, circle cover, rgba(102, 51, 153, 0.75), rebeccapurple);
+  background-image: -o-radial-gradient(center center, circle cover, rgba(102, 51, 153, 0.75), rebeccapurple);
+  background-image: -ms-radial-gradient(center center, circle cover, rgba(102, 51, 153, 0.75), rebeccapurple);
+  background-image: -moz-radial-gradient(center center, circle cover, rgba(102, 51, 153, 0.75), rebeccapurple);
+  background-image: -webkit-radial-gradient(center center, circle cover, rgba(102, 51, 153, 0.75), rebeccapurple);
+}
+
+/* /Typographic */
+/* Custom 
+.page__background {
+  position: absolute;
+  margin: -150px 0 0 -305px;
+  top: 50%;
+  left: 50%;
+  z-index: -100;
+} */
+.page__background {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  margin: -150px 0 0 -350px;
+  left: 50%;
+  z-index: 8;
+  /* mix-blend-mode: overlay; */
+  /* mix-blend-mode: color-dodge; */
+  mix-blend-mode: multiply;
+  color: #fff;
+  padding: 0 0 55px 75px;
+  top: 50%;
+  /*    position: absolute;
+    margin: -150px 0 0 -350px;
+    bottom: -35px;
+    left: 50%;
+    z-index: 9;
+    opacity: 0.75;
+    /*color: rgba(00,00,00,0.2);
+    background-color: rgba(00,00,00,0.3);
+    padding: 0 0 55px 75px;*/
+}
+
+.page__background .yee {
+  font-size: 4rem;
+  margin: 0 auto;
+  line-height: 90px;
+  position: relative;
+  text-shadow: 3px 3px 2px #000;
+}
+
+.page__background .beyond-words {
+  font-family: 'Merriweather', serif;
+}
+
+.page__background .yeet {
+  font-family: 'Great Vibes';
+  -webkit-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(-25deg);
+  transform: rotate(-25deg);
+  display: inline-block;
+  position: relative;
+  top: -20px;
+}
+
+.page__footer {
+  color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: calc(100vh - 6em);
+  left: 50%;
+  margin: auto -250px auto;
+  text-shadow: 3px 3px 1px #000;
+  font-size: 1.5em;
+  width: 500px;
+  text-align: center;
+  line-height: 5px;
+  z-index: 8;
+  box-shadow: 9px 6px rgba(255, 255, 255, 0.5);
+  /*background-color: rgba(66, 66, 66, 0.75);*/
+  /*opacity: 0.8;*/
+  mix-blend-mode: hard-light;
+}
+
+.page__footer h3 {
+  text-shadow: none;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke-width: 0.02em;
+  -webkit-text-stroke-color: white;
+  font-size: 1.3em;
+  font-family: 'Ultra', serif;
+}
+
+#bgvid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  /*mix-blend-mode: color-dodge;*/
+}
+
+#micSelect {
+  /* display: none; */
+}
+
+#audioSelectWrapper {
+  padding: 20px;
+  z-index: 9;
+  position: relative;
+}
