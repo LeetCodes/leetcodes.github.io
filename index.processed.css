@@ -110,7 +110,7 @@ body {
   z-index: 8;
   /* mix-blend-mode: multiply; */
   /* mix-blend-mode: color-dodge; */
-  mix-blend-mode: overlay;
+  mix-blend-mode: difference;
   color: #fff;
   padding: 0 0 55px 75px;
   top: 50%;
