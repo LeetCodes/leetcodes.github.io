@@ -12,8 +12,9 @@ import('https://dev.jspm.io/cash-dom').then(({ default: $ }) => $(function () {
    
     const ripper = new Jack()
     ripper.scRIP([
+       'https://soundcloud.com/leetcodes/sets/remixes-of-in-game-music',
        'https://soundcloud.com/groove-delight/groove-delight-dance-floor', 
        'https://soundcloud.com/krash_music/groove-delight-krash-wonderwall'
     ])
-       .then(t=>t.forEach(mp3=>$(`<audio controls src="${mp3}"></audio>`).appendTo(document.body)))
+       .then(t=>t.forEach(mp3=>$(`<audio preload="metadata" controls src="${mp3}"></audio>`).appendTo(document.body)))
 }))
