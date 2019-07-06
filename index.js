@@ -262,7 +262,11 @@ songs["Hey Oh"] = "https://s3.us-east-2.amazonaws.com/leetcodes/assets/Busta_Rhy
       
 	*/
 $("body").click(()=> {
-audio.play();
+try {
+	audio.play();
+}catch(e){
+	window.location.reload(); // shit quick fix LoL
+}
         /*if(!played){
           played = !played;
           queue.loadFile({src:songs["Kanjiklub"], type:createjs.Types.AUDIO})
