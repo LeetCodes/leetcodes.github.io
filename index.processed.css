@@ -56,7 +56,7 @@ canvas {
   visibility: hidden;
   opacity: 0;
   width: 500px;
-  display: none;
+  transition: all 0.5s ease-in;
 }
 
 #mainWrapper:hover #presetControls {
