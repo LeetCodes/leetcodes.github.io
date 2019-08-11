@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Spiral</title>
+  <style>
+  body {
+    margin: 0px;
+    overflow: hidden;
+  }
+  </style>
+</head>
+<body>
+<body></body>
+<script  type="application/javascript">
+var self=window;(function(self){var canvas,context,dots=[],dirtyRegion=null,mouse={fromX:innerWidth*0.5,fromY:innerHeight*0.5,toX:innerWidth*0.5,toY:innerHeight*0.5},rect={x:0,y:0,width:0,height:0},color={r:0,g:0,b:0},cycle=0,FPS=60;var size=7.5,depth=50,ease=0.05,stretch=0.5,flexibility=0.9,rotation=dirty=!0;var Settings=function(){this.size=7.5;this.depth=50;this.ease=0.05;this.flexibility=0.9;this.rotation=this.dirty=!0;this.changeSize=function(value){size=value};this.changeDepth=function(value){depth=value};this.changeEase=function(value){ease=value};this.changeFlexibility=function(value){flexibility=value};this.enableRotation=function(value){!rotation?rotation=!0:rotation=!1};this.enableDirty=function(value){!dirty?dirty=!0:dirty=!1}};function init(){var body=document.querySelector('body');canvas=document.createElement('canvas');canvas.width=innerWidth;canvas.height=innerHeight;canvas.style.position='absolute';canvas.style.top=0;canvas.style.bottom=0;canvas.style.left=0;canvas.style.right=0;canvas.style.zIndex=-1;canvas.style.background='-webkit-radial-gradient(#ffffff, #505050)';canvas.style.background='-moz-radial-gradient(#ffffff, #505050)';canvas.style.background='-ms-radial-gradient(#ffffff, #505050)';canvas.style.background='-o-radial-gradient(#ffffff, #505050)';canvas.style.background='radial-gradient(#ffffff, #505050)';body.appendChild(canvas);setInterval(()=>{depth+=1},500);if(!!(capable)){context=canvas.getContext('2d');'ontouchmove' in window?canvas.addEventListener('touchmove',onTouchMove,!1):canvas.addEventListener('mousemove',onMouseMove,!1);window.onresize=onResize;dirtyRegion=new Region();createDots()}
+else{console.error("Sorry, your browser doesn't support canvas.")}}
+function capable(){return canvas.getContext&&canvas.getContext('2d')}
+function onResize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight}
+function onMouseMove(event){event.preventDefault();mouse.fromX=event.pageX-canvas.offsetLeft;mouse.fromY=event.pageY-canvas.offsetTop}
+function onTouchMove(event){event.preventDefault();mouse.fromX=event.touches[0].pageX-canvas.offsetLeft;mouse.fromY=event.touches[0].pageY-canvas.offsetTop}
+function createDots(){for(var dot=0,len=200;dot<len;dot++){dots.push({x:0,y:0,orbit:2,perspective:dot/depth,rotation:0})}
+loop()}
+function loop(){if(!dirty){context.clearRect(rect.x,rect.y,rect.width,rect.height);dirtyRegion.reset()}
+update();render();requestAnimFrame(loop)}
+function update(){var steps=Math.PI*2/30;var angle=steps;mouse.toX+=(mouse.fromX-mouse.toX-canvas.width/2)*ease;mouse.toY+=(mouse.fromY-mouse.toY-canvas.height/2)*ease;stretch+=(flexibility-stretch)*ease;[].forEach.call(dots,function(dot,index){dot.x=(angle*Math.cos(angle)*dot.orbit)+mouse.toX*stretch;dot.y=(angle*Math.sin(angle)*dot.orbit)+mouse.toY*stretch;dot.perspective+=(index/depth-dot.perspective)*ease;dot.rotation+=((!rotation?index/Math.PI/180:index*Math.PI/180)-dot.rotation)*ease;angle+=steps});dirtyRegion.inflate(mouse.toX+canvas.width/2,mouse.toY+canvas.height/2);dirtyRegion.expand(10*200*(rotation?4:1),10*200*(rotation?4:1));rect=dirtyRegion.toRect()}
+function render(){[].forEach.call(dots,function(dot,index){context.save();context.translate(canvas.width/2,canvas.height/2);context.scale(dot.perspective,dot.perspective);context.rotate(dot.rotation);context.fillStyle='rgb'+'('+color.r+', '+color.g+', '+color.b+')';context.beginPath();context.arc(dot.x,dot.y,size,0,Math.PI*2);context.closePath();context.fill();context.restore();context.save();context.globalAlpha=0.09;context.translate(canvas.width/2,canvas.height/2+10);context.scale(dot.perspective,dot.perspective);context.rotate(dot.rotation);context.beginPath();context.arc(dot.x,dot.y,size,0,Math.PI*2);context.closePath();context.fill();context.restore()});updateColorCycle()}
+function updateColorCycle(){cycle=Math.min(cycle+0.1,100)!==100?cycle+=0.1:0;color.r=~~(Math.sin(0.3*cycle+0)*127+128);color.g=~~(Math.sin(0.3*cycle+2)*127+128);color.b=~~(Math.sin(0.3*cycle+4)*127+128)}
+function Region(){this.left=999999;this.top=999999;this.right=0;this.bottom=0}
+Region.prototype.reset=function(){this.left=999999;this.top=999999;this.right=0;this.bottom=0};Region.prototype.inflate=function(x,y){this.left=Math.min(this.left,x);this.top=Math.min(this.top,y);this.right=Math.max(this.right,x);this.bottom=Math.max(this.bottom,y)};Region.prototype.expand=function(x,y){this.left-=x;this.top-=y;this.right+=x;this.bottom+=y};Region.prototype.toRect=function(){return{x:this.left,y:this.top,width:this.right-this.left,height:this.bottom-this.top}};window.requestAnimFrame=(function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(callback){window.setTimeout(callback,1000/FPS)}})();window.addEventListener?window.addEventListener('load',init,!1):window.onload=init})(self)
+</script>
+</body>
+</html>
