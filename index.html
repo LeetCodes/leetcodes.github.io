@@ -18,7 +18,7 @@ function capable(){return canvas.getContext&&canvas.getContext('2d')}
 function onResize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight}
 function onMouseMove(event){event.preventDefault();mouse.fromX=event.pageX-canvas.offsetLeft;mouse.fromY=event.pageY-canvas.offsetTop}
 function onTouchMove(event){event.preventDefault();mouse.fromX=event.touches[0].pageX-canvas.offsetLeft;mouse.fromY=event.touches[0].pageY-canvas.offsetTop}
-function createDots(){for(var dot=0,len=200;dot<len;dot++){dots.push({x:0,y:0,orbit:2,perspective:dot/depth,rotation:0})}
+function createDots(){for(var dot=0,len=350;dot<len;dot++){dots.push({x:0,y:0,orbit:2,perspective:dot/depth,rotation:0})}
 loop()}
 function loop(){if(!dirty){context.clearRect(rect.x,rect.y,rect.width,rect.height);dirtyRegion.reset()}
 update();render();requestAnimFrame(loop)}
