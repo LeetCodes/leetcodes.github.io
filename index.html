@@ -2,25 +2,15 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>LeetCodes</title>
-  <style>
-  body {
-    margin: 0px;
-    overflow: hidden;
-  }
-  </style>
+  <title>Skull Card</title>
+  <link rel="stylesheet" href="/css/style.css">
+
 </head>
 <body>
-<script  type="application/javascript">
-var self=window;
-(function(H){function w(){var c=document.querySelector("body");a=document.createElement("canvas");a.width=innerWidth;a.height=innerHeight;a.style.position="absolute";a.style.top=0;a.style.bottom=0;a.style.left=0;a.style.right=0;a.style.zIndex=-1;a.style.background="-webkit-radial-gradient(#ffffff, #505050)";a.style.background="-moz-radial-gradient(#ffffff, #505050)";a.style.background="-ms-radial-gradient(#ffffff, #505050)";a.style.background="-o-radial-gradient(#ffffff, #505050)";a.style.background=
-"radial-gradient(#ffffff, #505050)";c.appendChild(a);setInterval(function(){q+=1},500);z?(b=a.getContext("2d"),"ontouchmove"in window?a.addEventListener("touchmove",A,!1):a.addEventListener("mousemove",B,!1),window.onresize=C,f=new g,D()):console.error("Sorry, your browser doesn't support canvas.")}function z(){return a.getContext&&a.getContext("2d")}function C(){a.width=window.innerWidth;a.height=window.innerHeight}function B(c){c.preventDefault();r=c.pageX-a.offsetLeft;t=c.pageY-a.offsetTop}function A(c){c.preventDefault();
-r=c.touches[0].pageX-a.offsetLeft;t=c.touches[0].pageY-a.offsetTop}function D(){for(var c=0;200>c;c++)u.push({x:0,y:0,orbit:2,perspective:c/q,rotation:0});x()}function x(){dirty||(b.clearRect(h.x,h.y,h.width,h.height),f.reset());E();F();requestAnimFrame(x)}function E(){var c=2*Math.PI/30,b=c;m+=(r-m-a.width/2)*k;n+=(t-n-a.height/2)*k;p+=(G-p)*k;[].forEach.call(u,function(a,l){a.x=b*Math.cos(b)*a.orbit+m*p;a.y=b*Math.sin(b)*a.orbit+n*p;a.perspective+=(l/q-a.perspective)*k;a.rotation+=((v?l*Math.PI/
-180:l/Math.PI/180)-a.rotation)*k;b+=c});f.inflate(m+a.width/2,n+a.height/2);f.expand(2E3*(v?4:1),2E3*(v?4:1));h=f.toRect()}function F(){[].forEach.call(u,function(c,l){b.save();b.translate(a.width/2,a.height/2);b.scale(c.perspective,c.perspective);b.rotate(c.rotation);b.fillStyle="rgb("+d.r+", "+d.g+", "+d.b+")";b.beginPath();b.arc(c.x,c.y,y,0,2*Math.PI);b.closePath();b.fill();b.restore();b.save();b.globalAlpha=.09;b.translate(a.width/2,a.height/2+10);b.scale(c.perspective,c.perspective);b.rotate(c.rotation);
-b.beginPath();b.arc(c.x,c.y,y,0,2*Math.PI);b.closePath();b.fill();b.restore()});e=100!==Math.min(e+.1,100)?e+=.1:0;d.r=~~(127*Math.sin(.3*e)+128);d.g=~~(127*Math.sin(.3*e+2)+128);d.b=~~(127*Math.sin(.3*e+4)+128)}function g(){this.top=this.left=999999;this.bottom=this.right=0}var a,b,u=[],f=null;var r=.5*innerWidth;var t=.5*innerHeight;var m=.5*innerWidth;var n=.5*innerHeight;var h={x:0,y:0,width:0,height:0},d={r:0,g:0,b:0},e=0,y=7.5,q=60,k=.05,p=.5,G=.9,v=dirty=!0;g.prototype.reset=function(){this.top=
-this.left=999999;this.bottom=this.right=0};g.prototype.inflate=function(a,b){this.left=Math.min(this.left,a);this.top=Math.min(this.top,b);this.right=Math.max(this.right,a);this.bottom=Math.max(this.bottom,b)};g.prototype.expand=function(a,b){this.left-=a;this.top-=b;this.right+=a;this.bottom+=b};g.prototype.toRect=function(){return{x:this.left,y:this.top,width:this.right-this.left,height:this.bottom-this.top}};window.requestAnimFrame=function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||
-window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(a){window.setTimeout(a,1E3/60)}}();window.addEventListener?window.addEventListener("load",w,!1):window.onload=w})(self);
-  
-  </script>
+<div id="world"></div>
+  <script src='/js/three.min.js'></script>
+<script src='/js/dat.gui.min.js'></script>
+<script type="module" src="/js/script.js"></script>
+
 </body>
 </html>
