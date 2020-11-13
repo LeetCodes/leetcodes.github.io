@@ -36,7 +36,7 @@ var options = {
   color0: [197, 81, 245],
   color1: [65, 0, 170],
   color2: [0, 150, 255],
-  isanimate: false,
+  isanimate: true,
 };
 
 var gui = new dat.GUI();
