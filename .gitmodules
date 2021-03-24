@@ -1,3 +1,0 @@
-[submodule "flash/shumway"]
-	path = flash/shumway
-	url = https://github.com/mozilla/shumway-dist
